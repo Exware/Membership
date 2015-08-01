@@ -1,0 +1,15 @@
+Thank you for registering as a member at [[siteurl]].
+Please keep this message for your records.
+
+You can access the members-only areas of the website using the following
+login information:
+
+Login: [[login]]
+Password: [[password]]
+
+After logging in, you will be able to update your profile and contact 
+information, and change your password.  There are many other features
+available to members who are signed in.  Please visit and check out
+what our website has to offer our members!
+
+[[siteurl]]

@@ -1,0 +1,13 @@
+column	datatype	size	label	display	read	write	search	validate	default
+member_fee_id	key#	0	Membership Fee ID	no	3	4	no	hard
+section_id	key:section	0	Section ID	no	3	4	no	yes
+type	string	80	Membership Type	key	0	2	yes	soft
+description	text	400	Description	brief	0	2	yes	no
+cost	money	0	Cost	brief	2	2	no	soft
+renew_cost	money	0	Renewal Cost	brief	2	2	no	yes
+visibility	list:member_visibility	20	Visibility	full	2	2	no	yes	visible
+open	date:picker	0	Registration Opens	full	2	2	no	no
+close	date:picker	0	Registration Closes	full	2	2	no	no
+sortkey	int	0	Sortkey	full	2	2	no	no
+options	set:mem_fee_options	255	Options	full	2	2	no	yes
+ctime	timestamp	0	Created on	full	2	4	no	no

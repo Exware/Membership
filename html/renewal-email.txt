@@ -1,0 +1,7 @@
+Thank you for renewing as a member at [[siteurl]].
+Please keep this message for your records.
+
+We appreciate your continued support.
+Your new member expiry date is [[expirydate]].
+
+[[siteurl]]

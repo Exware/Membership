@@ -1,0 +1,98 @@
+<h1>Membership Management</h1>
+
+<h2>1. Profiles</h2>
+
+<p>
+    1.1 Every user has a user record with generic information such as name, organization, login, a photo, and an email address that the website should use for
+    automated communications.
+</p>
+<p>
+    1.2 Every user has a number of additional "meta" fields that hold special profile questions/values such as brand names, and other information specific to your association.
+    This data is kept separate from the main user record to make it easier to grow/extend the database without incurring special development or database
+    administration costs. However, the system tries to blend these fields into the main profile form so they do not have to be dealt with separately.
+</p>
+<p>
+    1.3 Every user has an account for tracking all of their financial transactions such as purchases and e-commerce payments. (Note that non-users may also
+    have accounts, if the website can sell to the general public.)
+</p>
+<p>
+    1.4 Every user has a number of contact records (often called address cards). Users can have multiple contact records for different places (eg. home,
+    office). They can also create additional contact records for different levels of privacy (eg. one home address card for administrators only, and another
+    home address card for publication on their profile). Note that each contact record can specify additional email addresses for the user, and these may be
+    different from the email address that the website uses for automated communications (see 1.1, above). The existence of numerous potential contact records
+    makes the system quite flexible, but can cause conceptual complications in reporting. For example, you might want to include a user's address in a report,
+    but the user might have several and it may be unclear which one the system should use.
+</p>
+<p>
+    1.5 Secondary members are associated with a primary member record via the "Related to" field in their profile. Secondary members can only relate to
+    members. Users who are not secondary contacts should not be related to anyone.
+</p>
+<p>
+    1.6 The member organization and the primary contact share the same user record. The company contact info was imported as the "main" contact for this user,
+    and made visible to users. The personal contact info was imported as the "office" contact for this user, and made visible to administrators only.
+</p>
+
+<h2>
+    2. Editing/Updating User Information
+</h2>
+
+<p>
+    2.1 Because user data is partitioned into different records, many updating functions are similarly partitioned. For instance, editing contact records is
+    separate from editing basic profile information.
+</p>
+<p>
+    2.2 Administrative users will see extra fields in the user profile forms, because of their higher access levels.
+</p>
+<p>
+    2.3 If you delete a user, it will delete all of the information in section 1, including all the secondaries. If you accidentally delete a user, you can
+    recover them from the Trash tool. Note that there are ways of hiding/disabling users without deleting them, and sometimes this is a better choice.
+</p>
+<p>
+    2.4 To remove the primary contact from the company, you should replace them with one of the secondaries. Go to the secondary, and promote them to the
+    primary spot, which will move the old primary to a secondary spot. Then you have the option of editing/deleting/disabling the former primary. If there are
+    no secondaries, then add a secondary with the new contact information, and then promote them.
+</p>
+<p>
+    2.5 To move a user to a different organization, you should edit their basic profile and (1) set their Membership Type to "secondary" and (2) change their
+    "Related to" field to the new organization. You may also need to change their "Company/Organization" field. After they have been moved, you then have the
+    option of promoting them to become the primary contact.
+</p>
+<p>
+    2.6 Do not attempt to move a primary member to another organization, if they have secondary members, or you will also move those secondaries. Instead, you
+    should first promote another secondary, so that the old primary gets demoted. Then it is safe to move the demoted user without bringing everyone else along
+    for the ride.
+</p>
+
+<h2>
+    3. Membership Status
+</h2>
+
+<p>
+    3.1 The membership status shows their current legal status with the association.
+</p>
+<p>
+    3.2 The status can be manually changed from the Status History screen. This only changes their status setting, and does not perform any other actions that
+    might be necessary, such as notifications, activations, etc. To approve membership applications, see 3.3, below.
+</p>
+<p>
+    3.3 If a membership application is pending, you will also see buttons to approve or reject the application. Clicking approve will activate the membership,
+    including sending notifications, etc. Clicking reject will undo the application and set the member back to their previous state. It will not refund any
+    fees collected, however.
+</p>
+
+<h2>
+    4. Reports
+</h2>
+<p>
+    4.1 There are two areas to generate reports on your membership.  The roster function in the Membership module allows you to quickly generate
+simple reports based on the type and status of your members.  For more advanced reports requiring conditionals (for example, all members
+belonging to the north-west chapter of your association who are expiring the next month), use the 'Report Builder for Members' module.
+</p>
+<p>
+    4.2 When generating the roster, you may select an unlimited number of membership types and membership statuses to include by clicking
+    on each individually.
+</p>
+<p>
+    4.3 The Roster displays membership information (eg expiry date, status, special meta fields).  Additionally, you may choose to include 
+    contact information and/or exclude secondary members by selecting from a list of report options when generating the roster.
+</p>

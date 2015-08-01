@@ -1,0 +1,12 @@
+type	tag	regexp
+#
+# optional Member fields
+#
+list:member_status	select	active|incomplete|pending|expired|archived
+list:user_type	select	member|associate|guest|staff
+list:gender	radio	M|F
+list:member_visibility	radio	visible|hidden
+list:member_privacy	radio	public|members only|administrators only
+list:member_type	select	regular
+list:honorific	select	Mr.|Ms.|Miss|Mrs.|M.|Mme.|Dr.|Hon.
+list:mem_fee_visibility radio   visible|hidden

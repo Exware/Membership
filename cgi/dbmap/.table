@@ -1,0 +1,5 @@
+table	alias	key	title	plural	report	read	insert	update	delete	search	index	class
+member	member	member_id	Member	Members	table	1	3	1	3	3	section_id;parent_id;type	Modules::Membership::Member
+member_status	member_status	member_status_id	Member Status	Member Status	table	3	3	3	3	3	member_id
+member_attribute	member_attribute	member_attribute_id	Extended Profile Information	Extended Profile Information	table	1	1	1	1	3	member_id;section_id;name
+member_fee	member_fee	member_fee_id	Membership Fee	Membership Fees	table	3	3	3	3	3	section_id	Modules::Membership::Fee

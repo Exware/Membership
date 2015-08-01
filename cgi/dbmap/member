@@ -1,0 +1,35 @@
+column	datatype	size	label	display	read	write	search	validate	default
+# identification
+member_id	key#	0	Member ID	brief	1	4	no	hard
+honorific	list:honorific	8	Honorific	full	0	1	yes	yes
+title	string	80	Title/Position	full	0	1	yes	no
+organization	string	80	Organization	key	0	1	yes	soft
+first_name	string	30	First Name	key	0	1	yes	soft
+middle_name	string	30	Middle Name/Initial	full	0	1	yes	no
+last_name	string	30	Last Name	key	0	1	yes	soft
+email	email	80	E-mail	brief	1	1	yes	soft
+# references
+parent_id	key:member	0	Related to	full	2	2	yes	yes
+section_id	key:section	0	Home Site	full	3	3	yes	yes
+# access control
+login	string	80	Login	full	2	2	general	yes
+password	password	40	Password	no	4	4	no	yes
+access	int	0	Access Level	full	2	2	yes	yes
+type	string	80	Membership Type	brief	1	2	yes	yes	regular
+visibility	list:member_visibility	40	List profile in member directories?	full	2	2	yes	no	visible
+privacy	list:member_privacy	40	Who can view your profile?	full	1	1	yes	no	members only
+login_count	int	0	Number of Logins	full	3	4	no	yes
+# authorizations
+subscribe	list:yn	10	Do you consent to receive email communications from us?	full	2	1	yes	yes	Y
+# dates etc.
+expirydate	date:picker	0	Expiry Date	brief   2	2	no	yes
+mtime	timestamp	0	Last Modified	full	2	4	no	yes
+ctime	timestamp	0	Created	full	2	4	no	yes
+last_login	timestamp	0	Last Login	full	3	4	no	yes
+# files
+photo	file	0	Photo or Image	full	0	2	no	no
+thumbnail	file	0	Thumbnail	full	0	2	no	no
+# misc
+notes	text	400	Notes	full	2	2	yes	no
+permissions	string	40	Permissions	full	2	4	no	yes
+#location_id	key=location	0	Branch	full	2	2	yes	yes

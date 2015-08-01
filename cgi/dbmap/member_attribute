@@ -1,0 +1,6 @@
+column	datatype	size	label	display	read	write	search	validate
+member_attribute_id	key#	0	ID	full	3	4	no	hard
+section_id	key:section	0	Site	brief	3	3	yes	yes
+member_id	key:member	0	Member	brief	3	3	yes	yes
+name	string	255	Attribute	key	1	1	yes	soft
+value	mediumtext	400	Value	brief	1	1	yes	no
